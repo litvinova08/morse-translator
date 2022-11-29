@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fields {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.input__text {
+  background-color: #42a6bc;
+  border: 4px solid black;
+  border-radius: 30px;
+  width: 200px;
+  height: 200px;
+}
+
+.morse__text {
+  background-color: #e8f2f1;
+  border: 4px solid black;
+  border-radius: 30px;
+  width: 200px;
+  height: 200px;
+}
+
+#translate {
+  background-color: #f9c057;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */
