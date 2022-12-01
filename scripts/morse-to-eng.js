@@ -1,10 +1,21 @@
-import {
-  translatorEngToMorse,
-  translatorMorseToEng,
-  inputText,
-  translation,
-  translateBtn,
-} from "./variables.js";
+import { translatorMorseToEng } from "./variables.js";
+
+//function that translates morse to eng
+export function translateMorseToEng(str) {
+  //split string with "    " -> to get words [str, str]
+  const arrOfMorseWords = splitMorseIntoWords(str);
+  //split morse words into letters [[], [], []]
+  const arrOfArrWithMorseSymbols = splitMorseWordsIntoLetters(arrOfMorseWords);
+  //loop through arrays and convert each morse symbol to a letter
+  const arrOfArrWithEngLetters = translateMorseToEngArr(
+    arrOfArrWithMorseSymbols
+  );
+  //join letters into words with no separator
+  const arrOfEngWords = joinLettersIntoWords(arrOfArrWithEngLetters);
+  //join words inot a string with " " space separator
+  const textTranslatedIntoEngStr = joinWordsIntoEngStr(arrOfEngWords);
+  return textTranslatedIntoEngStr;
+}
 
 // function that join words in a string with " " space separator
 export function joinWordsIntoEngStr(arr) {
@@ -26,7 +37,7 @@ export function joinLettersIntoWords(arrOfArr) {
 // );
 
 //function that loop through an array of arrays with morse words and convert each morse symbol to a letter
-export function translateMorseToEng(arrOfArr) {
+export function translateMorseToEngArr(arrOfArr) {
   return arrOfArr.map((arr) => {
     return arr.map((letter) => {
       return convertMorseSymbolToEng(letter);
@@ -62,8 +73,3 @@ export function splitMorseIntoWords(str) {
   return str.split("    ");
 }
 // console.log(splitMorseIntoWords("... ---    ... ---"));
-
-//function that converts array of morse symbols into a string with a space between
-export function covertMorseArrtoMorseStr(morseArr) {
-  return morseArr.join(" ");
-}
