@@ -13,9 +13,13 @@ translateBtn.addEventListener("click", () => {
   } else if (checkedInput === "morse") {
     translation.value = translateMorseToEng(textToTranslate);
   } else if (checkedInput === "invalid") {
-    alert("need valid input");
-  } else if (checkedInput === "") {
-    alert("What do you want to translate?");
+    alert(
+      "Sorry, I can read only Latin letters or Morse code. Please, try again."
+    );
+  } else if (checkedInput === "empty") {
+    alert(
+      "What do you want to translate? Please, enter your text or Morse code"
+    );
   }
 });
 
@@ -32,6 +36,8 @@ export function checkInput(str) {
     rsl = "eng";
   } else if (/^[ .-]+$/i.test(str)) {
     rsl = "morse";
+  } else if (str === "") {
+    rsl = "empty";
   } else {
     rsl = "invalid";
   }

@@ -1,4 +1,4 @@
-import { translatorEngToMorse } from "./variables.js";
+import { translatorEngToMorse } from "./translators.js";
 
 //function that translates eng to morse
 export function translateEngToMorse(str) {
@@ -13,7 +13,7 @@ export function translateEngToMorse(str) {
   return textTranslatedInMorseStr;
 }
 
-//function that accepts an array of eng letters, loops through this array and convert eng letters to morse code; returns an array of morse code symbols
+//function that accepts an array of eng letters, loops through this array and converts eng letters to morse code; returns an array of morse code symbols
 export function translateEngToMorseArr(arr) {
   return arr.map((symbol) => {
     if (symbol === " ") {

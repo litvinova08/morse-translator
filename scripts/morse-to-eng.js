@@ -1,42 +1,35 @@
-import { translatorMorseToEng } from "./variables.js";
+import { translatorMorseToEng } from "./translators.js";
 
 //function that translates morse to eng
 export function translateMorseToEng(str) {
-  //split string with "    " -> to get words [str, str]
+  //split a morse string with "    " to get an array of morse words [str, str]
   const arrOfMorseWords = splitMorseIntoWords(str);
-  //split morse words into letters [[], [], []]
+  //split an array of morse words into letters [[], [], []]
   const arrOfArrWithMorseSymbols = splitMorseWordsIntoLetters(arrOfMorseWords);
-  //loop through arrays and convert each morse symbol to a letter
+  //convert each morse symbol into an eng letter
   const arrOfArrWithEngLetters = translateMorseToEngArr(
     arrOfArrWithMorseSymbols
   );
-  //join letters into words with no separator
+  //join eng letters into words [str, str]
   const arrOfEngWords = joinLettersIntoWords(arrOfArrWithEngLetters);
-  //join words inot a string with " " space separator
+  //join words into a string with " " space separator
   const textTranslatedIntoEngStr = joinWordsIntoEngStr(arrOfEngWords);
   return textTranslatedIntoEngStr;
 }
 
-// function that join words in a string with " " space separator
+// function that joins words in a string with " " space separator
 export function joinWordsIntoEngStr(arr) {
   return arr.join(" ");
 }
-// console.log("join words into eng str" + joinWordsIntoEngStr(["as", "ss"]));
 
-//function that join letters into words with no separator
+//function that joins letters into words with no separator
 export function joinLettersIntoWords(arrOfArr) {
   return arrOfArr.map((arr) => {
     return arr.join("");
   });
 }
-// console.log(
-//   joinLettersIntoWords([
-//     ["a", "s"],
-//     ["s", "s"],
-//   ])
-// );
 
-//function that loop through an array of arrays with morse words and convert each morse symbol to a letter
+//function that loops through an array of arrays with morse words and converts each morse symbol to a letter
 export function translateMorseToEngArr(arrOfArr) {
   return arrOfArr.map((arr) => {
     return arr.map((letter) => {
@@ -46,30 +39,20 @@ export function translateMorseToEngArr(arrOfArr) {
   });
 }
 
-// console.log(
-//   translateMorseToEng([
-//     ["...", "-"],
-//     ["..", "-.-"],
-//   ])
-// );
-
 //function converts a morse code character to a english letter
 export function convertMorseSymbolToEng(letter) {
   return translatorMorseToEng[letter];
 }
-// console.log(convertMorseSymbolToEng(".... . .-.. .-.. ---    .-. .. - .-"));
 
-//function that split array of morse words into letters [[], [], []]
+//function that splits array of morse words into letters [[], [], []]
 export function splitMorseWordsIntoLetters(arr) {
   const arrOfArrsWithMorseLetters = arr.map((wordArr) => {
     return wordArr.split(" ");
   });
   return arrOfArrsWithMorseLetters;
 }
-// console.log(splitMorseWordsIntoLetters(["... ---", "... ---"]));
 
-//function split string of morse code with "    " -> to get morse words [str, str]
+//function splits string of morse code with "    " -> to get morse words [str, str]
 export function splitMorseIntoWords(str) {
   return str.split("    ");
 }
-// console.log(splitMorseIntoWords("... ---    ... ---"));

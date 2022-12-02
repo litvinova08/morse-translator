@@ -1,0 +1,26 @@
+@mixin titleFormat($font-size) {
+  margin: 30px 0;
+  font-size: $font-size;
+  color: white;
+  text-shadow: 2px 2px 3px black;
+}
+
+@mixin textFormat {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  background: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+}
+
+@mixin boxFormat($background-color) {
+  background-color: $background-color;
+  border: 2px solid #7a6b50;
+  box-shadow: 2px 2px 2px black;
+  margin: 30px 190px;
+  border-radius: 30px;
+  width: 200px;
+  height: 200px;
+}
