@@ -26,12 +26,21 @@
   height: 200px;
 }
 
-#translate {
+.btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
   background-color: #f9c057;
   border: 2px solid black;
   border-radius: 10px;
   width: 100px;
   height: 30px;
+}
+
+#empty {
+  width: 100px;
 }
 
 /*# sourceMappingURL=styles.css.map */
