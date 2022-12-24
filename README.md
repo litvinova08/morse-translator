@@ -15,3 +15,5 @@ Margarita Litvinova
 ## Project Status
 
 In progress
+
+![This is an project image](./assets/morse.png)
