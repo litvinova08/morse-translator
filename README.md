@@ -2,8 +2,9 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/litvinova08/morse-translator)
 [![Code Coverage](https://img.shields.io/codecov/c/github/litvinova08/morse-translator)](https://codecov.io/github/litvinova08/morse-translator)
+![Coverage](./coverage/badges.svg)
 
-![project screenshot](./e-store/src/assets/screenshot.png)
+![project screenshot](./assets/morse.png)
 
 ## Link to Deployed Version
 

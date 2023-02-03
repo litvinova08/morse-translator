@@ -7,5 +7,8 @@
   },
   "scripts": {
     "test": "jest"
+  },
+  "dependencies": {
+    "coverage-badges-cli": "^1.0.11"
   }
 }
