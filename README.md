@@ -2,7 +2,6 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/litvinova08/morse-translator)
 [![Code Coverage](https://img.shields.io/codecov/c/github/litvinova08/morse-translator)](https://codecov.io/github/litvinova08/morse-translator)
-![Coverage](./coverage/badges.svg)
 
 ![project screenshot](./assets/morse.png)
 
@@ -14,13 +13,19 @@ litvinova08.github.io/morse-translator/
 
 This task required me to create a web page Morse Code translator. The focus of this project was putting my code into modules and creating unit tests.
 
+- The user can either input some English text or some Morse Code and get translation
+- Input can detect if a piece of text is english or morse and translate accordingly
+
 ## Reflection
 
-- I
+- The main insights from this project is how to write tests. this encouraged me to think how to make my functions pure in order to be able to test them. This required a lot of refactoring the code and exploring edge cases to further develop my tests.
 
 ## Future Goals
 
--
+- Fix test coverage badge
+- Add test for checkInput if “invalid”
+- Refuctor functions that have several returns, make them in one line where possible
+- Throw errors instead of alerts
 
 ### Stay in touch
 
