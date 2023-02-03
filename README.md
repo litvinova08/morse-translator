@@ -1,12 +1,35 @@
 # Morse Translator
 
-This is a Morse Translator.
+![GitHub issues](https://img.shields.io/github/issues/litvinova08/morse-translator)
+[![Code Coverage](https://img.shields.io/codecov/c/github/litvinova08/morse-translator)](https://codecov.io/github/litvinova08/morse-translator)
 
-1. the user can enter either Latin letters or Morse code into the left box;
-2. Translation will appear in the right box;
-3. The user can only enter either Latin letters or Morse Code. If the user enters both types of symbols or any other characters, an alert will appear;
-4. If the user clicks TRANSLATE without entering any input, an alert will appear;
-5. CLEAN button cleans both inputs.
+![project screenshot](./e-store/src/assets/screenshot.png)
+
+## Link to Deployed Version
+
+litvinova08.github.io/morse-translator/
+
+## Description of project (spec / MVP)
+
+This task required me to create a web page Morse Code translator. The focus of this project was putting my code into modules and creating unit tests.
+
+## Reflection
+
+- I
+
+## Future Goals
+
+-
+
+### Stay in touch
+
+- Email: ma.litvinova08@gmail.com
+- Portfolio: https://litvinova08.github.io/portfolio-project/
+- Linkedin: https://www.linkedin.com/in/margarita-l-44860b15b/
+
+### Licence
+
+- the MIT open source licence
 
 ## Author
 
@@ -15,5 +38,3 @@ Margarita Litvinova
 ## Project Status
 
 In progress
-
-![This is an project image](./assets/morse.png)
