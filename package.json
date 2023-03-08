@@ -9,6 +9,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "coverage-badges-cli": "^1.0.11"
+    "coverage-badges-cli": "^1.1.0"
   }
 }
